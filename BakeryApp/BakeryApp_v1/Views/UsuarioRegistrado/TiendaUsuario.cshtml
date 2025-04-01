@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "_LayoutUsuario";
+}
+
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Tienda</h1>
+                    <p>A continuación se presentan las categorías y productos disponibles.</p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+
+                <img src="~/img/Logo_Transparente.png" class="img-fluid">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="product-section">
+    <div class="container justify-content-center">
+        <div class="col-lg-4 form-group mb-3">
+
+            <form onsubmit="BuscarProducto(event)">
+                <input type="text" id="nombreProducto" class="form-control" placeholder="Ingrese el nombre del producto a buscar" />
+
+                <input type="submit" value="Buscar" class="btn form-control mt-3"/>
+            </form>
+
+
+        </div>
+        <div class="col-lg-8">
+            <div class="intro-excerpt">
+                <h1>Busca tu producto en nuestras categorias.</h1>
+                <p>Si ya tienes un antojo, utilza nuestras categorias para encontrar lo que buscas.</p>
+            </div>
+        </div>
+        <br />
+        <div class="row justify-content-center" id="divPrincipal">
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Categorias -->
+
+<div class="hero">
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" id="paginacionCategoria">
+                <div class="intro-excerpt">
+                    
+                </div>
+            </div>
+            <div class="col-lg-7">
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+
+
+
+
+
+@section Scripts {
+
+    <script type="text/javascript" src="~/js/buscarProducto/buscar.js" asp-append-version="true"> </script>
+    <script type="text/javascript" src="~/js/categoriasUsuario/funciones.js" asp-append-version="true"></script>
+}

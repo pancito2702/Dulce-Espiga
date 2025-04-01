@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "_LayoutEmpleado";
+}
+
+
+<div>
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Productos</h1>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="card card-solid">
+        <div class="card-body pb-0">
+            <div class="row d-flex align-items-stretch" id="agregar">
+                @Html.AntiForgeryToken()
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <nav aria-label="Contacts Page Navigation" id="navFooter">
+            <ul class="pagination justify-content-center m-0">
+                <li>
+                    <a href="@Url.Action("AgregarProducto", "ProductoEmpleado")" class="btn btn-sm btn-primary">
+                        Agregar Producto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/productoEmpleado/index.js" asp-append-version="true">
+
+    </script>
+}

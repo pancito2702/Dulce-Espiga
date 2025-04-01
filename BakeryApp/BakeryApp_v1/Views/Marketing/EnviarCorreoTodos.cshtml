@@ -1,0 +1,100 @@
+﻿@{
+    Layout = "_LayoutAdministrador";
+}
+
+<div>
+
+    <div>
+
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="row">
+                        <h1 class="text-center">Enviar Correo</h1>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content">
+
+
+            <div class="card card-solid col align-self-center">
+
+                <div class="card-body pb-0">
+                    <div class="row d-flex justify-content-center align-items-stretch">
+
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card bg-light">
+
+                                <br />
+                                <div class="card-body pt-0">
+                                    <form onsubmit="GuardarMensajeBoletin(event)">
+                                        @Html.AntiForgeryToken()
+                                        <div class="form-group">
+
+
+                                            <label> Remitente:</label>
+                                            <input type="text" class="form-control" value="Dulce Espiga" disabled>
+
+
+                                        </div>
+                                        <br />
+                                        <div class="form-group">
+
+                                            <label for="asunto">Asunto:</label>
+                                            <input type="text" class="form-control" placeholder="Asunto" id="asunto">
+
+
+                                        </div>
+
+                            
+
+
+                                        <br />
+
+                                        <div class="form-group">
+                                            <label for="mensaje" class="text-black">Mensaje del correo</label>
+                                            <textarea name="mensaje" id="mensaje" cols="30" rows="5" class="form-control" placeholder="Escriba el contenido del correo aca..."></textarea>
+
+                                        </div>
+
+                                        <br />
+                                        <div class="card-footer">
+                                            <div class="text-right">
+                                                <button type="submit" class="btn btn-sm btn-primary">
+                                                    Enviar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+</div>
+
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/marketingAdmin/enviarCorreoTodos.js" asp-append-version="true"></script>
+}
+

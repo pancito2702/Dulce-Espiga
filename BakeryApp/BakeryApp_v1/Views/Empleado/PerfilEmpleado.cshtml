@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "_LayoutEmpleado";
+}
+
+<div>
+
+    <section class="content-header">
+    </section>
+
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+
+
+                    <div class="card card-primary card-outline ">
+                        <div class="card-body box-profile ">
+                            <div class="text-center" id="divUsuario">
+                                <img class="profile-user-img img-fluid img-circle"
+                                     src="~/dist/img/avatar.png"
+                                     alt="User profile picture">
+                            </div>
+
+                            <h3 class="profile-username text-center"></h3>
+
+                            <p class="text-muted text-center">Colaborador</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-9">
+                    <div class="card card-primary ">
+                        <div class="card-header custom-navbar">
+                            <h3 class="card-title">Mi informacion</h3>
+                        </div>
+
+                        <div class="card-body" id="divPrincipal">
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+@section Scripts{
+    <script type="text/javascript" src="~/js/perfilEmpleado/ver.js" asp-append-version="true"></script>
+}

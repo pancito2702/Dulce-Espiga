@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+
+<div class="untree_co-section">
+    <div class="row w-100">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="mb-3">Cambiar contraseña</h1>
+            <p>Por favor sigue los siguientes pasos para cambiar tu contraseña e ingresar a tu cuenta.</p>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center">
+     
+
+        <div class="block w-100">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form onsubmit="CambiarContra(event)">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label class="text-black" for="correo">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" placeholder="Correoelectronico@ejemplo.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="text-black" for="codigo">Código de Recuperación</label>
+                            <input type="text" class="form-control" id="codigo" placeholder="abc123d" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="text-black" for="contra">Contraseña nueva</label>
+                            <input type="password" class="form-control" id="contra" placeholder="Contraseña nueva" required>
+                        </div>
+
+                        <div class="d-grid">
+                            <button class="btn btn-secondary" type="submit">Cambiar contraseña</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/cambiarContra/cambiarContra.js" asp-append-version="true"></script>
+}
+

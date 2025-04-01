@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "_LayoutEmpleado";
+}
+
+<div>
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Categorias</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div class="card card-solid">
+        <div class="card-body pb-0">
+            <div class="row d-flex align-items-stretch" id="agregar">
+            </div>
+        </div>
+    </div>
+    @Html.AntiForgeryToken()
+    <div class="card-footer">
+        <nav aria-label="Contacts Page Navigation" id="navFooter">
+            <ul class="pagination justify-content-center m-2">
+
+                <li>
+                    <a href="@Url.Action("AgregarCategoria", "CategoriaEmpleado")" class="btn btn-sm btn-primary">
+                        Agregar Categoria
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+</div>
+
+
+
+@section Scripts {
+    <script src="~/js/categoriaEmpleado/index.js" asp-append-version="true">
+
+
+    </script>
+
+}
+
+
+@*    <ul class="pagination justify-content-center m-3">
+
+
+                    <li class="page-item"><a class="page-link bg-dark" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link bg-dark" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link bg-dark" href="#">3</a></li>
+
+                </ul> *@
+
+
+
+@* <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+   <div class="card bg-light">
+        <div class="card-header text-muted border-bottom-0">
+            Categoria 2
+        </div>
+        <br />
+        <div class="card-body pt-0">
+            <div class="row">
+                <div class="col-7">
+                    <h2 class="lead"><b>Categoria Cupcakes</b></h2>
+                    <p class="text-muted text-sm"><b>Nombre: </b> Cupcakes </p>
+                    <p class="text-muted text-sm"><b>Detalles: </b> Productos muy dulces </p>
+
+                </div>
+                <div class="col-5 text-center">
+                    <img src="~/img/CupcakePrueba.jpg" alt="" class="img-circle img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="text-right">
+                <a href="@Url.Action("EditarCategoria", "Categoria")" class="btn btn-sm btn-primary">
+                    Editar
+                </a>
+                <a href="#" class="btn btn-sm">
+                    Eliminar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>  *@

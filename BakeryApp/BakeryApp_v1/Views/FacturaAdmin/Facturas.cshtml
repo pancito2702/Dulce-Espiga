@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "_LayoutAdministrador";
+}
+
+
+
+<div>
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Facturas</h1>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content">
+        <div class="row" id="paginacion">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Historial de facturas.</h3>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-bordered table-hover">
+                            @Html.AntiForgeryToken()
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th class="text-center">Cliente</th>
+                                    <th class="text-center">Método de Pago</th>
+                                    <th class="text-center">Orden Relacionada</th>
+                                    <th class="text-center">Total pagado</th>
+                                    <th class="text-center">Estado Pedido</th>
+                                    <th class="text-center">Ver / Eliminar </th>
+                                    <th class="text-center">Ver nota / Crear nota </th>
+                                </tr>
+                            </thead>
+                            <tbody id="agregar">
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/facturaAdmin/index.js" asp-append-version="true"></script>
+}
+

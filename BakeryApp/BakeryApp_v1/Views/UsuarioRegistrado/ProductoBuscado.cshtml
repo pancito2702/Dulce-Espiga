@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "_LayoutUsuario";
+}
+
+
+
+<div class="content-wrapper">
+
+    <section class="content">
+
+
+        <div class="card card-solid">
+            <div class="card-body">
+                <div class="row">
+                    <div class="we-help-section">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                @Html.AntiForgeryToken()
+                                <h1>Visualizar producto</h1>
+                                <br />
+                                <div class="col-lg-7 mb-5 mb-lg-0" id="divPrincipal">
+                                   
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <br />
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/verProductoBuscado/ver.js" asp-append-version="true"></script>
+}

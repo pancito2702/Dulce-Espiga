@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "_LayoutAdministrador";
+}
+
+
+<div>
+
+    <section class="content-header">
+    </section>
+
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+
+
+                    <div class="card card-primary card-outline ">
+                        <div class="card-body box-profile ">
+                            <div class="text-center" id="divUsuario">
+                                <img class="profile-user-img img-fluid img-circle"
+                                     src="~/dist/img/avatar2.png"
+                                     alt="User profile picture">
+                            </div>
+
+
+
+                            <p class="text-muted text-center">Administrador</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-9">
+                    <div class="card card-primary ">
+                        <div class="card-header custom-navbar">
+                            <h3 class="card-title">Mi informacion</h3>
+                        </div>
+
+                        <div class="card-body" id="divPrincipal">
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/perfilAdmin/ver.js" asp-append-version="true"></script>
+}

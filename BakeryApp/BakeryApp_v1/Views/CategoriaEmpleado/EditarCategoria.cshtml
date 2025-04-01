@@ -1,0 +1,100 @@
+﻿@{
+    Layout = "_LayoutEmpleado";
+}
+
+
+
+<div>
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Editar categoria</h1>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content">
+
+
+        <div class="card card-solid">
+            <div class="card-body pb-0">
+                <div class="row d-flex justify-content-center align-items-stretch">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card bg-light">
+
+                            <br />
+                            <form method="post" onsubmit="EditarCategoria(event)">
+                                @Html.AntiForgeryToken()
+                                <div class="card-body pt-0">
+                                    <div class="form-group">
+
+
+                                        <label>Nombre:</label>
+                                        <input type="text" class="form-control" placeholder="Nombre nuevo" id="nombreCategoria">
+
+
+                                    </div>
+                                    <br />
+                                    <div class="form group">
+
+
+                                        <label>Detalles:</label>
+                                        <input type="text" class="form-control" placeholder="Detalles nuevos" id="descripcionCategoria">
+
+
+                                    </div>
+
+                                    <br />
+
+
+
+                                    <div class="col-5 text-left">
+                                        <label>Ejemplo:</label>
+                                        <img alt="No se pudo cargar la imagen" class="img-circle img-fluid" id="imagenCategoria">
+                                    </div>
+
+                                    <br />
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="customFile">Cargar Archivo</label>
+                                        <input type="file" class="form-control" id="imagenFormulario" onchange="mostrarImagenSeleccionada()" />
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+                                        <button class="btn btn-sm btn-primary" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" id="imagenBorrar">
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+
+
+
+
+@section Scripts
+{
+    <script type="text/javascript" src="/js/categoriaEmpleado/editar.js" asp-append-version="true">
+
+    </script>
+}

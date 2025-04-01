@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "_LayoutAdministrador";
+}
+
+<div>
+
+    <div>
+
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="row">
+                        <h1 class="text-center">Agregar receta</h1>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content">
+
+
+            <div class="card card-solid">
+
+                <div class="card-body pb-0">
+                    <div class="row d-flex justify-content-center align-items-stretch">
+
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card bg-light">
+
+                                <br />
+                                <form onsubmit="GuardarReceta(event)">
+                                    @Html.AntiForgeryToken()
+                                    <div class="card-body pt-0">
+                                        <div class="form-group">
+
+
+                                            <label for="nombreReceta">Nombre:</label>
+                                            <input id="nombreReceta" type="text" class="form-control" placeholder="Nombre receta">
+
+
+                                        </div>
+                                        <br />
+
+
+                                        <br />
+
+                                        <div class="form-group">
+                                            <label for="instruccionesReceta" class="text-black">Instrucciones exactas</label>
+                                            <textarea name="instruccionesReceta" id="instruccionesReceta" cols="30" rows="5" class="form-control" placeholder="Escriba las instrucciones de la receta aca..."></textarea>
+
+                                        </div>
+
+                                        <br />
+                                        <div class="from-group">
+                                            <label for="ingredientes" class="text-black">Ingredientes <span class="text-danger"></span></label>
+                                            <select id="ingredientes" class="form-control" multiple>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="text-right">
+                                            <button type="submit" class="btn btn-sm btn-primary">
+                                                Guardar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+</div>
+
+@section Scripts
+{
+
+
+    <script type="text/javascript" src="~/js/receta/agregar.js" asp-append-version="true">
+
+
+    </script>
+}

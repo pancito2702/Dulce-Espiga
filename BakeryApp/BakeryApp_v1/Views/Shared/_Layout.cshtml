@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="La panadería artesanal Dulce Espiga, es un emprendimiento relacionado a la repostería como queques, cupcakes u otros, actualmente se ubica en Costa Rica, Heredia, San Rafael" />
+    <meta name="keywords" content="Panadería, Reposteria, Costa Rica, Heredia, San Rafael, Cupcakes, Queques, Pastales" />
+    <title>Panadería Dulce Espiga</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/tiny-slider.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/imagenes.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+        <div class="container">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Dulce Espiga<span>.</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Activar Navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li><a class="nav-link" href="@Url.Action("Tienda", "Home")">Tienda</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Servicios", "Home")">Nuestros Servicios</a></li>
+                    <li><a class="nav-link" href="@Url.Action("SobreNosotros", "Home")">Sobre Nosotros</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Contacto", "Home")">Contacto</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="btn btn-white-outline" href="@Url.Action("IniciarSesion", "Home")">Iniciar Sesion</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </nav>
+
+
+
+
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="footer-section">
+        <div class="container relative">
+
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="@Url.Action("Index", "Home")" class="footer-logo">Dulce Espiga<span>.</span></a></div>
+                    <p class="mb-4">
+                        Dulce Espiga es un emprendimiento familiar, centrado en la elaboración de productos relacionados a la pastaleria
+                        artesanal, actualmente estamos ubicamos en Heredia.
+                    </p>
+
+                    <ul class="list-unstyled custom-social">
+                        <li><a href="https://www.facebook.com/p/Dulce-Espiga-100065083177438/"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="https://www.instagram.com/dulceespigabakery/#"><span class="fa fa-brands fa-instagram"></span></a></li>
+                        @* <li><a href="#"><span class="fa fa-brands fa-whatsapp"></span></a></li> *@
+                    </ul>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="@Url.Action("Tienda", "Home")">Tienda</a></li>
+                                <li><a href="@Url.Action("Servicios", "Home")">Servicios</a></li>
+                                <li><a href="@Url.Action("SobreNosotros", "Home")">Sobre Nosotros</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="@Url.Action("Contacto", "Home")">Contacto</a></li>
+                                <li><a href="@Url.Action("Registrarse", "Home")">Registrarse</a></li>
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-top copyright">
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <p class="mb-2 text-center text-lg-start">
+                            BakeryApp &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/tiny-slider.js"></script>
+    <script src="/js/custom.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

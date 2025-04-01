@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "_LayoutEmpleado";
+}
+
+
+<div>
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="row">
+                    <h1 class="text-center">Agregar Categoria</h1>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+
+
+        <div class="card card-solid">
+            <div class="card-body pb-0">
+                <div class="row d-flex justify-content-center align-items-stretch">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card bg-light">
+                            <br />
+                            <form method="post" onsubmit="GuardarCategoria(event)">
+                                @Html.AntiForgeryToken()
+                                <div class="card-body pt-0">
+                                    <div class="form-group">
+                                        <label>Nombre:</label>
+                                        <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                                    </div>
+                                    <br />
+                                    <div class="form group">
+
+
+                                        <label>Detalles:</label>
+                                        <input type="text" class="form-control" placeholder="Detalles" id="detalles">
+
+
+                                    </div>
+
+
+
+                                    <div class="col-5 text-left">
+                                        <label>Imagen:</label>
+                                        <img src="~/img/CupcakePrueba.jpg" id="imagenFront" alt="No se ha podida cargar la imagen" class="img-circle img-fluid">
+                                    </div>
+
+                                    <br />
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="customFile">Cargar Archivo</label>
+                                        <input type="file" class="form-control" id="imagenCategoria" onchange="mostrarImagenSeleccionada()" />
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+                                        <button class="btn btn-sm btn-primary" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/categoriaEmpleado/agregar.js" asp-append-version="true">
+
+    </script>
+
+}

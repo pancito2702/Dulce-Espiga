@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Panadería Dulce Espiga</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link href="~/dist/css/adminlte.min.css" rel="stylesheet" />
+
+
+    <link href="~/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/tiny-slider.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+
+</head>
+<body>
+
+
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+        <div class="container">
+            <a class="navbar-brand" href="@Url.Action("Index", "Administrador")">Dulce Espiga<span>.</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("PerfilAdministrador", "Administrador")">Perfil</a>
+                    </li>
+                    <li><a class="nav-link" href="@Url.Action("Index", "Ingrediente")">Inventario</a></li>
+                    <li><a class="nav-link active" href="@Url.Action("Index", "Producto")">Productos</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Index", "Categoria")">Categorias </a></li>
+                    <li><a class="nav-link" href="@Url.Action("Index", "Perfil")">Perfiles </a></li>
+                    <li><a class="nav-link active" href="@Url.Action("Index", "Receta")">Recetas</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Facturas", "FacturaAdmin")">Facturas</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Pedidos", "PedidoAdmin")">Pedidos</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Marketing", "Marketing")"> Marketing </a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+
+                    <form method="post" action="@Url.Action("CerrarSesion", "Home")">
+                    <li><button class="btn btn-white-outline" type="submit">Cerrar Sesion</button></li>
+                    </form>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+
+
+
+
+    <div> 
+        @RenderBody()
+    </div>
+
+    <footer class="footer-section">
+        <div class="container relative">
+
+
+
+            
+
+            <div class="row g-5  mb-5 mt-3">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="@Url.Action("Index", "Home")" class="footer-logo">Dulce Espiga<span>.</span></a></div>
+                    <p class="mb-4">
+                        Dulce Espiga es un emprendimiento familiar, centrado en la elaboración de productos relacionados a la pastaleria
+                        artesanal, actualmente estamos ubicamos en Heredia.
+                    </p>
+
+                  
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="@Url.Action("Tienda", "Home")">Tienda</a></li>
+                                <li><a href="@Url.Action("Servicios", "Home")">Nuestros Servicios</a></li>
+                                <li><a href="@Url.Action("SobreNosotros", "Home")">Sobre Nosotros</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="@Url.Action("Contacto", "Home")">Contacto</a></li>
+                                <li><a href="@Url.Action("Registrarse", "Home")">Registrarse</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top copyright">
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <p class="mb-2 text-center text-lg-start">
+                            BakeryApp &copy;<script>document.write(new Date().getFullYear());</script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="/js/tiny-slider.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../dist/js/adminlte.min.js"></script>
+
+    <script src="../../dist/js/demo.js"></script>
+
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

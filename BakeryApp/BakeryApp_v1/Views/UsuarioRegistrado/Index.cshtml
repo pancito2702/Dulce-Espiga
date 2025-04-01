@@ -1,0 +1,95 @@
+﻿@{
+    Layout = "_LayoutUsuario";
+}
+
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Panadería Artesanal Dulce Espiga<span clsas="d-block"></span></h1>
+                    <p><a href="@Url.Action("TiendaUsuario", "UsuarioRegistrado")" class="btn btn-secondary me-2">Comprar Ahora</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+
+                <img src="~/img/Logo_Transparente.png" class="img-fluid">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product-section">
+    <div class="container">
+        <div class="row" id="divPrincipal">
+
+
+
+            <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+                <h2 class="mb-4 section-title">Productos en Tendencia</h2>
+                <p class="mb-4">Algunos de los productos mas vendidos en nuestra tienda son los siguientes: </p>
+                <p><a href="@Url.Action("Tienda", "Home")" class="btn">Ir a la tienda</a></p>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="why-choose-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <h2 class="section-title">¿Por que deberías escogernos?</h2>
+                <p>Somos una microempresa costarricense, que busca el crecimiento a través de una página web.</p>
+
+                <div class="row my-5">
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                           
+                            <h3>Microempresa Costarricense</h3>
+                            <p>Actualmente buscamos crecer mediante la implementación de un sistema web</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            
+                            <h3>Facilidad de compra</h3>
+                            <p>
+                                Nuestra página web ofrece distintas facilidades para llevar a cabo un pedido, como un carrito de compras para manejar los productos
+                                que se deseean comprar.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                           
+                            <h3>Soporte mediante distintas plataformas</h3>
+                            <p>Ofrecemos la posiblidad de atender cualquier duda o consulta especifica en WhatsApp o correo electrónico. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                           
+                            <h3>Modalidades de Envío</h3>
+                            <p>
+                                Ofrecemos la modalidad de envío mediante motorizado únicamente en ciertas zonas del gran área metropolitina,
+                                de igual manera ofrecemos la modalidad de retiro en la sucursal.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/productosMasVendidosUsuario/obtenerProductos.js" asp-append-version="true"> </script>
+}

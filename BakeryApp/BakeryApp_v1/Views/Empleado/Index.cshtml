@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "_LayoutEmpleado";
+}
+
+<div>
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Dashboard Colaborador</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-3 col-6">
+
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3 id="ordenesNuevas"></h3>
+
+                            <p>Ordenes Nuevas</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="@Url.Action("Pedidos", "PedidoEmpleado")" class="small-box-footer">Ver Ordenes <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/dashboardEmpleado/acciones.js" asp-append-version="true"> </script>
+}

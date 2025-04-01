@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "_LayoutEmpleado";
+}
+
+
+
+<div>
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="row">
+                    <h1 class="text-center">Inventario</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center align-items-stretch">
+                <div class="col-md-6">
+
+                    <div class="card card-primary">
+
+
+                        <form role="form" onsubmit="EditarIngrediente(event)">
+                            <div class="card-body">
+                                @Html.AntiForgeryToken()
+                                <div class="form-group">
+                                    <label for="nombreIngrediente">Nombre del producto</label>
+                                    <input type="text" class="form-control" id="nombreIngrediente" placeholder="Nombre Producto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="detalleIngrediente">Detalle</label>
+                                    <input type="text" class="form-control" id="detalleIngrediente" placeholder="Detalle">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cantidadIngrediente">Cantidad</label>
+                                    <input type="number" class="form-control" id="cantidadIngrediente" placeholder="Cantidad">
+                                </div>
+                                <div class="form-group">
+                                    <label for="unidadMedida" class="text-black">Unidad de medida: <span class="text-danger"></span></label>
+                                    <select id="unidadMedida" class="form-control">
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="precioIngrediente">Precio por Unidad</label>
+                                    <input type="number" class="form-control" id="precioIngrediente" placeholder="Precio por Unidad" step="any">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fechaVencimiento">Fecha de vencimiento</label>
+                                    <input type="date" class="form-control" id="fechaVencimiento" placeholder="Fecha de Vencimiento">
+                                </div>
+                            </div>
+
+
+                            <div class="card-footer">
+                                <button class="btn btn-primary" type="submit">Agregar</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/ingredienteEmpleado/editar.js" asp-append-version="true">
+
+    </script>
+
+}

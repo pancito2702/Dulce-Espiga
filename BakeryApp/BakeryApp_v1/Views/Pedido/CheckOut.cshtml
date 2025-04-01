@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "_LayoutUsuario";
+}
+
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Plataforma de Pago.</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<form onsubmit="GuardarPedido(event)">
+    @Html.AntiForgeryToken()
+    <div class="untree_co-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <h2 class="h3 mb-3 text-black">Checkout </h2>
+                    <div class="p-3 p-lg-5 border bg-white">
+                        <strong> El envio a domicilio tiene un costo de 2500₡</strong>
+
+                        <div class="form-group">
+                            <label for="tipoEnvio" class="text-black">Tipo de Envio <span class="text-danger">*</span></label>
+                            <select id="tipoEnvio" class="form-control">
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="direccion" class="text-black">Dirección <span class="text-danger">*</span></label>
+                            <select id="direccion" class="form-control">
+                            </select>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+
+
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <h2 class="h3 mb-3 text-black">Tu Pedido</h2>
+                            <div class="p-3 p-lg-5 border bg-white">
+                                <table class="table site-block-order-table mb-5">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Producto</th>
+                                            <th>Cantidad</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tablaCarrito">
+                                    </tbody>
+                                </table>
+                                <div id="divMetodosDePago">
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script type="text/javascript" src="~/js/pedidoUsuario/agregar.js" asp-append-version="true">
+
+    </script>
+}

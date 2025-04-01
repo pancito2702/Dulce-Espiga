@@ -1,0 +1,66 @@
+﻿
+
+
+
+@{
+	Layout = "_LayoutAdministrador";
+}
+
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Dashboard Administrativo</h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3 id="ordenesNuevas"> </h3>
+
+                        <p>Ordenes Nuevas</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="@Url.Action("Pedidos", "PedidoAdmin")" class="small-box-footer">Ver Ordenes <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+           
+           
+           
+            <div class="col-lg-3 col-6">
+                
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3 id="cantidadPersonas"> </h3>
+
+                        <p>Usuarios Registrados</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                    <a href="@Url.Action("Index", "Perfil")" class="small-box-footer">Ver usuarios <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            
+           
+           
+        </div>
+       
+       
+    </div>
+</section>
+
+@section Scripts{
+    <script type="text/javascript" src="~/js/dashboardAdmin/acciones.js" asp-append-version="true"></script>
+}

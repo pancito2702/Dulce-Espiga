@@ -1,0 +1,108 @@
+﻿@{
+    Layout = "_LayoutUsuario";
+}
+
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Tu carrito de Compras.</h1>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-5">
+        <form class="col-12" method="post">
+            <div class="site-blocks-table table-responsive">
+                <table class="table table-bordered sm">
+                    <thead>
+                        <tr>
+                            <th class="product-thumbnail">Imagen</th>
+                            <th class="product-name">Producto</th>
+                            <th class="product-price">Precio Unitario</th>
+                            <th class="product-quantity">Cantidad</th>
+                            <th class="product-total">Total</th>
+                            <th class="product-remove">Remover</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaPrincipal">
+                        @Html.AntiForgeryToken()
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </form>
+    </div>
+
+    
+
+
+
+    <div class="row mb-3">
+
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <div class="row">
+                <div class="col-12">
+                    <a class="btn btn-outline-black btn-sm btn-block py-3" href="@Url.Action("TiendaUsuario", "UsuarioRegistrado")">Continuar Comprando</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card p-4">
+                <div class="row">
+                    <div class="col-12 text-right border-bottom mb-4">
+                        <h3 class="text-black h4 text-uppercase">Totales del carrito</h3>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <span class="text-black">Total</span>
+                    </div>
+                    <div class="col-6 text-right">
+                        <strong class="text-black" id="total"></strong>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <span class="text-black">Total con IVA</span>
+                    </div>
+                    <div class="col-6 text-right">
+                        <strong class="text-black" id="totalIva"></strong>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <a class="btn btn-sm py-3" id="divCheckout">Proceder al Pago</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/carrito/index.js" asp-append-version="true">
+
+    </script>
+
+}
